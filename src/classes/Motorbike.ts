@@ -72,10 +72,10 @@ class Motorbike extends Vehicle {
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
     console.log(
-      `Front Wheel: ${this.wheels[0].getDiameter()} inch with a ${this.wheels[0].getTireBrand()} tire`
+      `Front Wheel: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
     );
     console.log(
-      `Rear Wheel: ${this.wheels[1].getDiameter()} inch with a ${this.wheels[1].getTireBrand()} tire`
+      `Rear Wheel: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
     );
   }
 }
