@@ -61,13 +61,14 @@ class Cli {
           name: 'vehicleType',
           message: 'Select a vehicle type',
           // TODO: Update the choices array to include Truck and Motorbike
-          choices: ['Car', 'Truck', 'Motorbile'],
+          choices: ['Car', 'Truck', 'Motorbike'],
         },
       ])
       .then((answers) => {
         if (answers.vehicleType === 'Car') {
           // create a car
           this.createCar();
+
         } else if (answers.vehicleType === 'Truck') {
           this.createTruck();
 
@@ -381,6 +382,10 @@ class Cli {
           }
         } else if (answers.action === 'Do a wheelie' && selectedVehicle instanceof Motorbike) {
           selectedVehicle.wheelie();
+        } else if (answers.action === 'Do a wheelie' && selectedVehicle instanceof Car) {
+          console.log("Your car cannot perform a wheelie");
+        } else if (answers.action === 'Do a wheelie' && selectedVehicle instanceof Truck) {
+          console.log("Your truck cannot perform a wheelie");
         }
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
