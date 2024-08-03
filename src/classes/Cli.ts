@@ -10,12 +10,12 @@ class Cli {
   // TODO: update the vehicles property to accept Truck and Motorbike objects as well
   // TODO: You will need to use the Union operator to define additional types for the array
   // TODO: See the AbleToTow interface for an example of how to use the Union operator
-  vehicles: (Car | Truck | Motorbike)[];
+  vehicles: (Car | Motorbike)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
   // TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car | Truck | Motorbike)[]) {
+  constructor(vehicles: (Car | Motorbike)[]) {
     this.vehicles = vehicles;
   }
 
@@ -310,12 +310,18 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
+            'Tow a vehicle',
+            'Do a wheelie',
             'Select or create another vehicle',
             'Exit',
           ],
         },
       ])
       .then((answers) => {
+        const selectedVehicle = this.vehicles.find (
+          (vehicle) => vehicle.vin === this.selectedVehicleVin
+        );
+
         // perform the selected action
         if (answers.action === 'Print details') {
           // find the selected vehicle and print its details
@@ -373,6 +379,8 @@ class Cli {
               this.vehicles[i].reverse();
             }
           }
+        } else if (answers.action === 'Do a wheelie' && selectedVehicle instanceof Motorbike) {
+          selectedVehicle.wheelie();
         }
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
