@@ -21,6 +21,8 @@ You can do a 'git clone' of my repository to clone it down onto your personal co
 
 Once you have the application running in your terminal, you will be prompted with a few questions about building a vehicle. You will be asked to build a new vehicle or asked to select an already existing vehicle. If you choose to create a new vehicle, you will be asked to choose a car, truck, or motorbike. You will then be asked about the vehicles make, model, year, weight and a few other things depending on the type of vehicle you are building. After you finish building your vehicle, you will be provided with some actions that your vehicle can perform. This includes starting your vehicle, speeding up, slowing down, turning left or right, stopping the vehicle, or performing vehicle type specific actions such as towing or doing a wheelie. When the vehicle is built, you are also able to print the details you provided in your terminal. All the vehicles you create are saved and can be reselected. They will not save when you exit your terminal so you cannot enter your terminal again and select them.
 
+Here is a link to a video demonstration of this application https://drive.google.com/file/d/1XUNi37OGaa-dcmvYlK0h1ce17oNh9GMn/view?usp=sharing 
+
 ## Credits
 
 This project was created by Alec Taber
