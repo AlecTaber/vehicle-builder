@@ -31,7 +31,50 @@ This project was created by Alec Taber
 
 ## Features
 
+**Vehicle Creation**
 
+- Create new vehicles of different types: Cars, Trucks, and Motorbikes.
+- Assign unique VINs to each vehicle using a static method.
+- Customize vehicle attributes during creation:
+- Car: Color, Make, Model, Year, Weight, Top Speed.
+- Truck: Color, Make, Model, Year, Weight, Top Speed, Towing Capacity.
+- Motorbike: Color, Make, Model, Year, Weight, Top Speed, Front Wheel (Diameter, Brand), Rear Wheel (Diameter, Brand).
+
+**Vehicle Selection**
+
+- Select an existing vehicle from a list to perform actions on.
+
+**Vehicle Actions**
+
+- Perform a variety of actions on the selected vehicle:
+- Print details.
+- Start the vehicle.
+- Accelerate by 5 MPH.
+- Decelerate by 5 MPH.
+- Stop the vehicle.
+- Turn right.
+- Turn left.
+- Reverse the vehicle.
+- Tow another vehicle (if the selected vehicle is a truck).
+- Perform a wheelie (if the selected vehicle is a motorbike).
+
+**Towing Capability**
+
+- Trucks can tow other vehicles:
+- Select a vehicle to tow from the list of existing vehicles.
+- Prevent trucks from towing themselves.
+- User Interaction
+- User-friendly command-line interface using Inquirer.js for easy interaction.
+- Prompts to guide the user through creating vehicles, selecting vehicles, and performing actions.
+
+**Vehicle Management**
+
+- Maintain a list of created vehicles within the application.
+- Ability to create, select, and manage multiple vehicles.
+
+**Extensibility**
+
+- Easily extendable to add more vehicle types or actions in the future.
 
 ## Tests
 
