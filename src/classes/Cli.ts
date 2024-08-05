@@ -409,7 +409,7 @@ class Cli {
         } else if (answers.action === 'Do a wheelie' && !(selectedVehicle instanceof Motorbike)) {
           console.log('This vehicle cannot do a wheelie');
         } else if (answers.action === 'Tow a vehicle' && selectedVehicle instanceof Truck) {
-          this.findVehicleToTow;
+          this.findVehicleToTow(selectedVehicle);
           return;
         } else if (answers.action === 'Tow a vehicle' && !(selectedVehicle instanceof Truck)) {
           console.log('This vehicle cannot tow another vehicle');
